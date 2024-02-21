@@ -1,10 +1,12 @@
-{
+/* Reset CSS */
+body,
+html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
 }
@@ -71,5 +73,24 @@ body {
 }
 
 .nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+/* Navbar Dropdown */
+.navbar .nav-item {
+    position: relative;
+}
+
+.navbar .nav-item .dropdown-menu {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    display: none;
+    float: none;
+    min-width: 100%;
+    z-index: 1000;
+}
+
+.navbar .nav-item:hover .dropdown-menu {
     display: block;
 }
