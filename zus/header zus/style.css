@@ -1,0 +1,77 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header */
+.header {
+    border-bottom: 1px solid #dee2e6;
+    padding: 20px 0;
+}
+
+.header-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #212529;
+    text-decoration: none;
+}
+
+.header-search {
+    margin-left: auto;
+}
+
+.form-control {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-control:focus {
+    border-color: #0d6efd;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #f8f9fa;
+}
+
+.nav-link {
+    color: #212529;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    z-index: 1000;
+    float: none;
+    min-width: 100%;
+    padding: 10px;
+    margin-top: 0.5rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0;
+    background-color: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
