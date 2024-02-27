@@ -1,0 +1,41 @@
+-- Vložení fiktivních strávníků
+INSERT INTO Stravnik (jmeno, prijmeni) VALUES
+('Jan', 'Novák'),
+('Marie', 'Dvořáková'),
+('Petr', 'Svoboda'),
+('Eva', 'Novotná');
+
+-- Vložení fiktivních jídel
+INSERT INTO Jidlo (nazev, cena) VALUES
+('Hovězí guláš', 120),
+('Kuřecí maso se zeleninou', 110),
+('Rybí filé na špenátu', 130),
+('Bramborová polévka', 40);
+
+-- Vložení fiktivního jídelního lístku na 1 týden (od 2024-02-26 do 2024-03-03)
+INSERT INTO JidloDen (datum, id_jidla) VALUES
+('2024-02-26', 1),
+('2024-02-26', 4),
+('2024-02-27', 2),
+('2024-02-27', 4),
+('2024-02-28', 3),
+('2024-02-28', 4),
+('2024-02-29', 1),
+('2024-02-29', 4),
+('2024-03-01', 2),
+('2024-03-01', 4),
+('2024-03-02', 3),
+('2024-03-02', 4),
+('2024-03-03', 1),
+('2024-03-03', 4);
+
+-- Vložení fiktivních objednávek strávníků na tento týden
+INSERT INTO Objednavka (id_stravnika, id_jidla_den) VALUES
+(1, 1), -- Jan Novák objednal Hovězí guláš a Bramborovou polévku 2024-02-26
+(1, 4), 
+(2, 2), -- Marie Dvořáková objednala Kuřecí maso se zeleninou a Bramborovou polévku 2024-02-27
+(2, 4),
+(3, 5), -- Petr Svoboda objednal Rybí filé na špenátu a Bramborovou polévku 2024-02-28
+(3, 6),
+(4, 7), -- Eva Novotná objednala Hovězí guláš a Bramborovou polévku 2024-02-29
+(4, 8);
