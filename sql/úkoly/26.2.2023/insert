@@ -1,25 +1,26 @@
--- Insert stravnici
 INSERT INTO stravnici (jmeno, platba) VALUES
 ('Jan Novák', true),
 ('Petr Smetana', true),
 ('Marie Křížová', true),
 ('Jana Veselá', true);
 
--- Insert jidla
-INSERT INTO jidla (nazev, cena) VALUES
+INSERT INTO hlavni_jidla (nazev, cena) VALUES
 ('Smažený kuřecí řízek', 120),
 ('Hovězí guláš', 130),
-('Kuřecí polévka', 50),
 ('Rýže s masovou omáčkou', 110),
 ('Těstoviny s rajčatovou omáčkou', 100);
 
--- Insert objednavky
-INSERT INTO objednavky (stravnik_id, jidlo_id, datum) VALUES
-(1, 1, '2024-03-01'),
-(2, 2, '2024-03-01'),
-(3, 3, '2024-03-01'),
-(4, 1, '2024-03-01'),
-(1, 4, '2024-03-02'),
-(2, 2, '2024-03-02'),
-(3, 5, '2024-03-02'),
-(4, 3, '2024-03-02');
+INSERT INTO polevky (nazev, cena) VALUES
+('Kuřecí polévka', 50),
+('Hovězí polévka', 55),
+('Rajčatová polévka', 45);
+
+INSERT INTO objednavky (stravnik_id, hlavni_jidlo_id, polevka_id, datum) VALUES
+(1, 1, 1, '2024-03-11'),
+(2, 2, 2, '2024-03-11'),
+(3, 3, 3, '2024-03-11'),
+(4, 4, 1, '2024-03-11'),
+(1, 2, 1, '2024-03-12'),
+(2, 3, 2, '2024-03-12'),
+(3, 4, 3, '2024-03-12'),
+(4, 1, 1, '2024-03-12');
