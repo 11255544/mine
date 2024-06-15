@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hudební přehrávač</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="player">
+        <audio id="audio"></audio>
+        <div class="controls">
+            <button id="prev"><i class="fas fa-backward"></i></button>
+            <button id="play"><i class="fas fa-play"></i></button>
+            <button id="next"><i class="fas fa-forward"></i></button>
+        </div>
+        <div class="song-info">
+            <select id="songSelect">
+                <option value="song1.mp3">Skladba 1</option>
+                <option value="song2.mp3">Skladba 2</option>
+                <option value="song3.mp3">Skladba 3</option>
+            </select>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
