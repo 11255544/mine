@@ -1,0 +1,263 @@
+/* Reset and general styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f2f2f2;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header styles */
+header {
+    background-color: #292929;
+    color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00adb5;
+}
+
+.burger {
+    display: none; /* Hide initially on desktop */
+    cursor: pointer;
+}
+
+.burger .line {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* Hero section styles */
+.hero {
+    background-color: #00adb5;
+    color: #fff;
+    text-align: center;
+    padding: 120px 0;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 32px;
+    background-color: #fff;
+    color: #00adb5;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #00adb5;
+    color: #fff;
+}
+
+/* Features section styles */
+.features {
+    background-color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.feature-item {
+    margin-bottom: 40px;
+}
+
+.feature-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Testimonials section styles */
+.testimonials {
+    background-color: #f7f7f7;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.testimonial-item {
+    margin-bottom: 40px;
+}
+
+.testimonial-item p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.testimonial-item cite {
+    font-size: 1.2rem;
+    font-style: normal;
+    color: #777;
+}
+
+/* Footer styles */
+footer {
+    background-color: #292929;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #292929;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        transition: max-height 0.3s ease;
+        max-height: 0;
+        overflow: hidden;
+        z-index: 10; /* Ensure it's above other content */
+    }
+
+    .nav-links.active {
+        max-height: 300px; /* Adjust as necessary */
+    }
+
+    .nav-links li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .burger.active .line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .burger.active .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.active .line:nth-child(3) {
+        transform: rotate(-45deg) translate(4px, -4px);
+    }
+
+    .hero {
+        padding: 100px 0;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .features {
+        padding: 60px 0;
+    }
+
+    .features h2 {
+        font-size: 2rem;
+    }
+
+    .feature-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .feature-item p {
+        font-size: 0.9rem;
+    }
+
+    .testimonials {
+        padding: 60px 0;
+    }
+
+    .testimonials h2 {
+        font-size: 2rem;
+    }
+
+    .testimonial-item p {
+        font-size: 1rem;
+    }
+
+    .testimonial-item cite {
+        font-size: 1rem;
+    }
+}
